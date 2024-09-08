@@ -38,7 +38,7 @@ try {
     Write-Host "Failed to create shortcut: $_"
 }
 ###########################################################################################################################################################
-
+#Credit goes to i-am-Jakoby, Luther, & Hobo. Amazing person and hacker.  
 <#
 .NOTES 
 	This is to clean up behind you and remove any evidence to prove you were there
