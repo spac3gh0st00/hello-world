@@ -1,4 +1,3 @@
 # hello-world
-This is the start of a new beginning! 
+This repo ill make some badusb scripts for the rubber ducky and flipper zero
 
-Wow this is where i've learn to make changes!
