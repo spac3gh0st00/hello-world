@@ -1,5 +1,5 @@
 # Define the executable filename as a variable
-$exeName = "this.exe"
+$exeName = "svchost.exe"
 
 # Step 1: Create the directory C:\Windows\Temp\Cache
 try {
