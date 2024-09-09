@@ -1,3 +1,8 @@
+# Intruder-Alert
+# Author: spac3gh0st
+# Description: This payload is meant to do an unauthorized file backup and execute it in a powershell script. See README.md file for more details.
+# Target: Windows 10, 11
+#
 # Define the executable filename as a variable
 $varName = "svchost.exe"
 
