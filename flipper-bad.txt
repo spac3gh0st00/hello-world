@@ -3,7 +3,7 @@ REM     Title: Intruder-Alert
 REM     Author: spac3gh0st
 
 REM     Description: This payload is meant to do an unauthorized drop of a file and executes it in a powershell script. See README.md file for more details.
-
+REM     DISCLAIMER: Intended for educational purposes. I do not condone malicious behavior. discretion advised.
 REM     Target: Windows 10, 11
 
 GUI r
